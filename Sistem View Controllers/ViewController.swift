@@ -50,19 +50,28 @@ class ViewController: UIViewController {
     
     @IBAction func cameraButtonPressed(_ sender: UIButton ) {
         let alert = UIAlertController(title: "Please Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
-            print(#line, #function, "Camera Action Selected")
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true)
+            }
+            alert.addAction(cameraAction)
         }
-        alert.addAction(cameraAction)
         
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { action in
-            print(#line, #function, "Photo Library Selected")
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { action in
+                imagePicker.sourceType = .photoLibrary
+                self.present(imagePicker, animated: true)
+            }
+            alert.addAction(photoLibraryAction)
+            
         }
-        alert.addAction(photoLibraryAction)
         
         alert.popoverPresentationController?.sourceView = sender
         
@@ -74,3 +83,14 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
+extension ViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.originalImage] as? UIImage else { return }
+        
+        imageView.image = selectedImage
+        dismiss(animated: true)
+    }
+}
+// MARK: - UINavigationControllerDelegate
+extension ViewController: UINavigationControllerDelegate {}
