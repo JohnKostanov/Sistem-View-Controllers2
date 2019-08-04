@@ -5,7 +5,7 @@
 //  Created by  Джон Костанов on 04/08/2019.
 //  Copyright © 2019 John Kostanov. All rights reserved.
 //
-
+import SafariServices
 import UIKit
 
 class ViewController: UIViewController {
@@ -41,7 +41,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func safariButtonPressed(_ sender: UIButton ) {
-        print(#line, #function)
+        let url = URL(string: "http://jw.org")!
+        let safari = SFSafariViewController(url: url)
+        present(safari, animated: true)
+        
+        
     }
     
     @IBAction func cameraButtonPressed(_ sender: UIButton ) {
