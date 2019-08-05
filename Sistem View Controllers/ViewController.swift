@@ -5,6 +5,7 @@
 //  Created by  Джон Костанов on 04/08/2019.
 //  Copyright © 2019 John Kostanov. All rights reserved.
 //
+import MessageUI
 import SafariServices
 import UIKit
 
@@ -79,7 +80,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func emailButtonPressed(_ sender: UIButton ) {
-        print(#line, #function)
+        guard MFMailComposeViewController.canSendMail() else {
+            print(#line, #function, "Can't send email")
+            return
+        }
+        
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        
+        mailComposer.setToRecipients(["support@learnSwift.ru"])
+        mailComposer.setSubject("Ошибка \(Data())")
+        mailComposer.setMessageBody("Пожалуйста, помогите С Message Compposer'ом", isHTML: false)
+        
+        present(mailComposer, animated: true)
     }
 }
 
@@ -94,3 +107,10 @@ extension ViewController: UIImagePickerControllerDelegate {
 }
 // MARK: - UINavigationControllerDelegate
 extension ViewController: UINavigationControllerDelegate {}
+
+// MARK: - MFMailComposeViewControllerDelegate
+extension ViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true)
+    }
+}
