@@ -80,10 +80,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func emailButtonPressed(_ sender: UIButton ) {
-        guard MFMailComposeViewController.canSendMail() else {
-            print(#line, #function, "Can't send email")
-            return
-        }
+        guard MFMailComposeViewController.canSendMail() else { return }
         
         let mailComposer = MFMailComposeViewController()
         mailComposer.mailComposeDelegate = self
@@ -93,6 +90,21 @@ class ViewController: UIViewController {
         mailComposer.setMessageBody("Пожалуйста, помогите С Message Compposer'ом", isHTML: false)
         
         present(mailComposer, animated: true)
+    }
+    
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+        guard MFMessageComposeViewController.canSendText() else { return }
+        
+        let messageCompose = MFMessageComposeViewController()
+        messageCompose.messageComposeDelegate = self
+        
+        // Configure the fields of the interface
+        messageCompose.recipients = ["34688499905"]
+        messageCompose.body = "Hello John!"
+        
+        // Present the view controller modally
+        present(messageCompose, animated: true, completion: nil)
+        
     }
 }
 
@@ -112,5 +124,13 @@ extension ViewController: UINavigationControllerDelegate {}
 extension ViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true)
+    }
+}
+
+//MARK: - MFMessageComposeViewControllerDelegate
+extension ViewController: MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        print(#line, #function, "Can't send message")
+        controller.dismiss(animated: true, completion: nil)
     }
 }

@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-2T-ekg">
                                 <rect key="frame" x="10" y="54" width="394" height="798"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmos" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-KH-QmG">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmos" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-KH-QmG">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="379"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-tT-XfX">
@@ -31,31 +31,38 @@
                                                 <rect key="frame" x="10" y="10" width="374" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmY-kR-g5w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                                         <state key="normal" title="Share"/>
                                                         <connections>
                                                             <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpX-8V-13p"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSH-5v-wuu">
-                                                        <rect key="frame" x="93.5" y="0.0" width="93.5" height="30"/>
+                                                        <rect key="frame" x="75" y="0.0" width="74.5" height="30"/>
                                                         <state key="normal" title="Safari"/>
                                                         <connections>
                                                             <action selector="safariButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6c-bs-EUW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ip-Yw-aXc">
-                                                        <rect key="frame" x="187" y="0.0" width="93.5" height="30"/>
+                                                        <rect key="frame" x="149.5" y="0.0" width="75" height="30"/>
                                                         <state key="normal" title="Camera"/>
                                                         <connections>
                                                             <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6M0-g4-whX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-c7-Y0D">
-                                                        <rect key="frame" x="280.5" y="0.0" width="93.5" height="30"/>
+                                                        <rect key="frame" x="224.5" y="0.0" width="74.5" height="30"/>
                                                         <state key="normal" title="E-mail"/>
                                                         <connections>
                                                             <action selector="emailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egd-IF-fBc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPf-s9-bKV">
+                                                        <rect key="frame" x="299" y="0.0" width="75" height="30"/>
+                                                        <state key="normal" title="Message"/>
+                                                        <connections>
+                                                            <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBP-8o-L8u"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
