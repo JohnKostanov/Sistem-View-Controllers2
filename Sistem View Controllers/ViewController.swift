@@ -108,6 +108,14 @@ class ViewController: UIViewController {
         messageCompose.recipients = ["34688499905"]
         messageCompose.body = "Hello John!"
         
+        if MFMessageComposeViewController.canSendAttachments(), let image = imageView.image {
+            guard let data = image.jpegData(compressionQuality: 0.8) else { return }
+            let filename = getDocumentsDirectory().appendingPathComponent("copy.jpg")
+            try? data.write(to: filename)
+            
+            messageCompose.addAttachmentData(data, typeIdentifier: "copy", filename: "copy.jpg")
+        }
+        
         // Present the view controller modally
         present(messageCompose, animated: true, completion: nil)
         
@@ -136,14 +144,8 @@ extension ViewController: MFMailComposeViewControllerDelegate {
 //MARK: - MFMessageComposeViewControllerDelegate
 extension ViewController: MFMessageComposeViewControllerDelegate {
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        print(#line, #function, "Can't send message")
         
-//        guard let image = UIImage(named: "cosmos") else { return }
-//        guard let data = image.jpegData(compressionQuality: 0.8) else { return }
-//        let filename = getDocumentsDirectory().appendingPathComponent("copy.jpg")
-//        try? data.write(to: filename)
-        
-//        controller.addAttachmentData(data, typeIdentifier: ".jpg", filename: "copy.jpg")
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
