@@ -33,6 +33,12 @@ class ViewController: UIViewController {
         stackView.axis = isVertical ? .vertical : .horizontal
     }
     
+    // MARK: - Methods
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
     // MARK: - Actions
     @IBAction func shareButtonPressed(_ sender: UIButton ) {
         guard let image = imageView.image else { return }
@@ -131,6 +137,13 @@ extension ViewController: MFMailComposeViewControllerDelegate {
 extension ViewController: MFMessageComposeViewControllerDelegate {
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         print(#line, #function, "Can't send message")
+        
+//        guard let image = UIImage(named: "cosmos") else { return }
+//        guard let data = image.jpegData(compressionQuality: 0.8) else { return }
+//        let filename = getDocumentsDirectory().appendingPathComponent("copy.jpg")
+//        try? data.write(to: filename)
+        
+//        controller.addAttachmentData(data, typeIdentifier: ".jpg", filename: "copy.jpg")
         controller.dismiss(animated: true, completion: nil)
     }
 }
