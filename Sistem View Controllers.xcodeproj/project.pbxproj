@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		527CE63422F8CFAF003F9D27 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 527CE63322F8CFAF003F9D27 /* spark.png */; };
+		527CE63822F8D0C2003F9D27 /* ParticleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 527CE63722F8D0C2003F9D27 /* ParticleScene.sks */; };
 		52E322CB22F7148A0086E475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E322CA22F7148A0086E475 /* AppDelegate.swift */; };
 		52E322CD22F7148A0086E475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E322CC22F7148A0086E475 /* ViewController.swift */; };
 		52E322D022F7148A0086E475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E322CE22F7148A0086E475 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		527CE63322F8CFAF003F9D27 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "../../../../Курсы/09. Курс - Application Programming Interface/24 Retrieving coordinates/WeatherApp/spark.png"; sourceTree = "<group>"; };
+		527CE63722F8D0C2003F9D27 /* ParticleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = ParticleScene.sks; path = "../../../../Курсы/09. Курс - Application Programming Interface/24 Retrieving coordinates/WeatherApp/ParticleScene.sks"; sourceTree = "<group>"; };
 		52E322C722F7148A0086E475 /* Sistem View Controllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sistem View Controllers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E322CA22F7148A0086E475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E322CC22F7148A0086E475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				52E322CC22F7148A0086E475 /* ViewController.swift */,
 				52E322CE22F7148A0086E475 /* Main.storyboard */,
 				52E322D122F7148B0086E475 /* Assets.xcassets */,
+				527CE63322F8CFAF003F9D27 /* spark.png */,
+				527CE63722F8D0C2003F9D27 /* ParticleScene.sks */,
 				52E322D322F7148B0086E475 /* LaunchScreen.storyboard */,
 				52E322D622F7148B0086E475 /* Info.plist */,
 			);
@@ -122,9 +128,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527CE63422F8CFAF003F9D27 /* spark.png in Resources */,
 				52E322D522F7148B0086E475 /* LaunchScreen.storyboard in Resources */,
 				52E322D222F7148B0086E475 /* Assets.xcassets in Resources */,
 				52E322D022F7148A0086E475 /* Main.storyboard in Resources */,
+				527CE63822F8D0C2003F9D27 /* ParticleScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

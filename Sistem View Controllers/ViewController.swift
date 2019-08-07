@@ -13,8 +13,7 @@ class ViewController: UIViewController {
     
     // MARH:- Outlets
     @IBOutlet var stackView: UIStackView!
-    @IBOutlet var imageView: UIImageView!
-    
+    @IBOutlet var imageView: UIImageView!  
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
