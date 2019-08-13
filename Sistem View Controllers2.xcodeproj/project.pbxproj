@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		527CE63422F8CFAF003F9D27 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 527CE63322F8CFAF003F9D27 /* spark.png */; };
-		527CE63822F8D0C2003F9D27 /* ParticleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 527CE63722F8D0C2003F9D27 /* ParticleScene.sks */; };
 		52E322CB22F7148A0086E475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E322CA22F7148A0086E475 /* AppDelegate.swift */; };
 		52E322CD22F7148A0086E475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E322CC22F7148A0086E475 /* ViewController.swift */; };
 		52E322D022F7148A0086E475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E322CE22F7148A0086E475 /* Main.storyboard */; };
@@ -17,9 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		527CE63322F8CFAF003F9D27 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "../../../../Курсы/09. Курс - Application Programming Interface/24 Retrieving coordinates/WeatherApp/spark.png"; sourceTree = "<group>"; };
-		527CE63722F8D0C2003F9D27 /* ParticleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = ParticleScene.sks; path = "../../../../Курсы/09. Курс - Application Programming Interface/24 Retrieving coordinates/WeatherApp/ParticleScene.sks"; sourceTree = "<group>"; };
-		52E322C722F7148A0086E475 /* Sistem View Controllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sistem View Controllers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E322C722F7148A0086E475 /* Sistem View Controllers2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sistem View Controllers2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E322CA22F7148A0086E475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E322CC22F7148A0086E475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52E322CF22F7148A0086E475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +35,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B04E4C2302E14E00CEB456 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52E322CA22F7148A0086E475 /* AppDelegate.swift */,
+				52E322D122F7148B0086E475 /* Assets.xcassets */,
+				52E322D622F7148B0086E475 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		52B04E4D2302E17B00CEB456 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E322CE22F7148A0086E475 /* Main.storyboard */,
+				52E322D322F7148B0086E475 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B04E4E2302E19700CEB456 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E322CC22F7148A0086E475 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		52E322BE22F7148A0086E475 = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +73,7 @@
 		52E322C822F7148A0086E475 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52E322C722F7148A0086E475 /* Sistem View Controllers.app */,
+				52E322C722F7148A0086E475 /* Sistem View Controllers2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,14 +81,9 @@
 		52E322C922F7148A0086E475 /* Sistem View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				52E322CA22F7148A0086E475 /* AppDelegate.swift */,
-				52E322CC22F7148A0086E475 /* ViewController.swift */,
-				52E322CE22F7148A0086E475 /* Main.storyboard */,
-				52E322D122F7148B0086E475 /* Assets.xcassets */,
-				527CE63322F8CFAF003F9D27 /* spark.png */,
-				527CE63722F8D0C2003F9D27 /* ParticleScene.sks */,
-				52E322D322F7148B0086E475 /* LaunchScreen.storyboard */,
-				52E322D622F7148B0086E475 /* Info.plist */,
+				52B04E4C2302E14E00CEB456 /* App */,
+				52B04E4E2302E19700CEB456 /* Controllers */,
+				52B04E4D2302E17B00CEB456 /* Views */,
 			);
 			path = "Sistem View Controllers";
 			sourceTree = "<group>";
@@ -73,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52E322C622F7148A0086E475 /* Sistem View Controllers */ = {
+		52E322C622F7148A0086E475 /* Sistem View Controllers2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52E322D922F7148B0086E475 /* Build configuration list for PBXNativeTarget "Sistem View Controllers" */;
+			buildConfigurationList = 52E322D922F7148B0086E475 /* Build configuration list for PBXNativeTarget "Sistem View Controllers2" */;
 			buildPhases = (
 				52E322C322F7148A0086E475 /* Sources */,
 				52E322C422F7148A0086E475 /* Frameworks */,
@@ -85,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = "Sistem View Controllers";
+			name = "Sistem View Controllers2";
 			productName = "Sistem View Controllers";
-			productReference = 52E322C722F7148A0086E475 /* Sistem View Controllers.app */;
+			productReference = 52E322C722F7148A0086E475 /* Sistem View Controllers2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52E322C222F7148A0086E475 /* Build configuration list for PBXProject "Sistem View Controllers" */;
+			buildConfigurationList = 52E322C222F7148A0086E475 /* Build configuration list for PBXProject "Sistem View Controllers2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52E322C622F7148A0086E475 /* Sistem View Controllers */,
+				52E322C622F7148A0086E475 /* Sistem View Controllers2 */,
 			);
 		};
 /* End PBXProject section */
@@ -128,11 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527CE63422F8CFAF003F9D27 /* spark.png in Resources */,
 				52E322D522F7148B0086E475 /* LaunchScreen.storyboard in Resources */,
 				52E322D222F7148B0086E475 /* Assets.xcassets in Resources */,
 				52E322D022F7148A0086E475 /* Main.storyboard in Resources */,
-				527CE63822F8D0C2003F9D27 /* ParticleScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +308,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = "Sistem View Controllers/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sistem View Controllers/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "John-Kostanov.Sistem-View-Controllers";
+				PRODUCT_BUNDLE_IDENTIFIER = "John-Kostanov.Sistem-View-Controllers2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,12 +326,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = "Sistem View Controllers/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sistem View Controllers/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "John-Kostanov.Sistem-View-Controllers";
+				PRODUCT_BUNDLE_IDENTIFIER = "John-Kostanov.Sistem-View-Controllers2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52E322C222F7148A0086E475 /* Build configuration list for PBXProject "Sistem View Controllers" */ = {
+		52E322C222F7148A0086E475 /* Build configuration list for PBXProject "Sistem View Controllers2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E322D722F7148B0086E475 /* Debug */,
@@ -334,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52E322D922F7148B0086E475 /* Build configuration list for PBXNativeTarget "Sistem View Controllers" */ = {
+		52E322D922F7148B0086E475 /* Build configuration list for PBXNativeTarget "Sistem View Controllers2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E322DA22F7148B0086E475 /* Debug */,

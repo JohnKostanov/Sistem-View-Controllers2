@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func safariButtonPressed(_ sender: UIButton ) {
-        let url = URL(string: "http://jw.org")!
+        let url = URL(string: "http://apple.com")!
         let safari = SFSafariViewController(url: url)
         present(safari, animated: true)
         
